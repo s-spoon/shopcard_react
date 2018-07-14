@@ -29,8 +29,10 @@
     "url": "git+https://github.com/jeffersonRibeiro/react-shopping-cart.git"
   },
   "keywords": [
+    "Netshoes",
     "React",
-    "eCommerce"
+    "Commerce",
+    "Recruitment-test"
   ],
   "author": "Jefferson Ribeiro",
   "license": "MIT",
