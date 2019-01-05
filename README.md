@@ -43,7 +43,7 @@ friendly user experience with instant visual updates and scaleable code in ecomm
 
 ## Getting started
 
-Try playing with the code on CodeSandbox :)
+You can play with the code on CodeSandbox :)
 
 [![Edit app](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/74rykw70qq)
 
