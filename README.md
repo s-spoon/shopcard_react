@@ -43,9 +43,9 @@ friendly user experience with instant visual updates and scaleable code in ecomm
 
 ## Getting started
 
-You can play with the code on CodeSandbox :)
+Try playing with the code on CodeSandbox :)
 
-[![Edit react-shopping-cart](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/r01pkz065o)
+[![Edit app](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/74rykw70qq)
 
 ## Build/Run
 
