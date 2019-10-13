@@ -65,7 +65,7 @@
       font-weight: bold;
       font-size: 0.7em;
       text-align: center;
-      line-height: 20px;
+      line-height: 18px;
       border-radius: 50%;
       background-color: #eabf00;
       position: absolute;
@@ -102,11 +102,8 @@
       position: relative;
       box-sizing: border-box;
       padding: 5%;
-      transition: background-color 0.2s, opacity 0.2s;
 
-      &:hover {
-        transform: scale(1.1);
-      }
+      transition: background-color 0.2s, opacity 0.2s;
 
       &::before {
         content: '';
@@ -120,6 +117,7 @@
 
       &--mouseover {
         background: #0c0b10;
+
         .shelf-item__details {
           .title,
           .desc {
@@ -146,7 +144,10 @@
         background-repeat: no-repeat;
         z-index: 2;
         cursor: pointer;
-        background-position-x: -17px;
+
+        &:hover {
+          background-position-x: -17px;
+        }
       }
 
       &__thumb,
@@ -251,7 +252,6 @@
     }
   }
 }
-
 
 /* MAC scrollbar para desktop*/
 @media screen and (min-width: 640px) {

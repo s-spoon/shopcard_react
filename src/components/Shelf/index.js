@@ -28,8 +28,8 @@ class Shelf extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { filters: nextFilters, sort: nextSort } = nextProps;
-    const { filters } = this.props;
-    if (nextFilters.length !== filters.length && JSON.stringify(nextFilters) !== JSON.stringify(filters)) {
+
+    if (nextFilters !== this.props.filters) {
       this.handleFetchProducts(nextFilters, undefined);
     }
 
