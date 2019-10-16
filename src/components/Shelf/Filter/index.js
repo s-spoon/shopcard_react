@@ -52,7 +52,11 @@ class Filter extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  filters: state.filters.items
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   { updateFilters }
 )(Filter);
