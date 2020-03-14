@@ -10,43 +10,47 @@ import './style.scss';
 
 const availableSizes = ['XS', 'S', 'M', 'ML', 'L', 'XL', 'XXL'];
 
-const Filter =(props)=> {
-  const selectedCheckboxes = new Set(); 
-
-  const toggleCheckbox = label => {
-    if (selectedCheckboxes.has(label)) {
-      selectedCheckboxes.delete(label);
-    } else {
-      selectedCheckboxes.add(label);
-    }
-
-    props.updateFilters(Array.from(selectedCheckboxes));
+class Filter extends Component {
+  static propTypes = {
+    updateFilters: PropTypes.func.isRequired,
+    filters: PropTypes.array
   };
 
-  const createCheckbox = label => (
+  componentDidMount() {
+    this.selectedCheckboxes = new Set();
+  }
+
+  toggleCheckbox = label => {
+    if (this.selectedCheckboxes.has(label)) {
+      this.selectedCheckboxes.delete(label);
+    } else {
+      this.selectedCheckboxes.add(label);
+    }
+
+    this.props.updateFilters(Array.from(this.selectedCheckboxes));
+  };
+
+  createCheckbox = label => (
     <Checkbox
       classes="filters-available-size"
       label={label}
-      handleCheckboxChange={toggleCheckbox}
+      handleCheckboxChange={this.toggleCheckbox}
       key={label}
     />
   );
 
-  const createCheckboxes = () => availableSizes.map(createCheckbox);
+  createCheckboxes = () => availableSizes.map(this.createCheckbox);
 
+  render() {
     return (
       <div className="filters">
         <h4 className="title">Sizes:</h4>
-        {createCheckboxes()}
+        {this.createCheckboxes()}
         <GithubStarButton />
       </div>
     );
+  }
 }
-
-Filter.propTypes = {
-  updateFilters: PropTypes.func.isRequired,
-  filters: PropTypes.array
-};
 
 export default connect(
   null,
